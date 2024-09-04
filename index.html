@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรแกรมคำนวณดอกเบี้ยทบต้น</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>โปรแกรมคำนวณดอกเบี้ยทบต้น</h1>
+        <div class="input-group">
+            <label for="principal">จำนวนเงินต้น:</label>
+            <input type="number" id="principal" placeholder="กรอกจำนวนเงินต้น">
+        </div>
+        <div class="input-group">
+            <label for="rate">อัตราดอกเบี้ยต่อปี (%):</label>
+            <input type="number" id="rate" placeholder="กรอกอัตราดอกเบี้ย">
+        </div>
+        <div class="input-group">
+            <label for="years">จำนวนปี:</label>
+            <input type="number" id="years" placeholder="กรอกจำนวนปี">
+        </div>
+        <div class="input-group">
+            <label for="frequency">ความถี่ในการทบต้น:</label>
+            <select id="frequency">
+                <option value="1">รายปี</option>
+                <option value="4">รายไตรมาส</option>
+                <option value="12">รายเดือน</option>
+                <option value="365">รายวัน</option>
+            </select>
+        </div>
+        <button onclick="calculateCompoundInterest()">คำนวณ</button>
+        <div class="result">
+            <h2>มูลค่าในอนาคต: <span id="result"></span></h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
